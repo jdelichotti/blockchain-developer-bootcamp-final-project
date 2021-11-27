@@ -8,7 +8,7 @@ import {
 } from '../config'
 import SmartBet from '../../build/contracts/SmartBet.json'
 
-export default function betsReady() {
+export default function BetsReady() {
   const [bets, setBets] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
   const betStates = ['BetFunding', 'Created', 'Open', 'Closed', 'ResultsReady', 'ReadyForPayment', 'Finished']  
