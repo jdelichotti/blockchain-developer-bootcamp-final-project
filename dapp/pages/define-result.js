@@ -9,7 +9,7 @@ const BetResults = ['NotStarted','Local Win', 'Vistor Win', 'Drawn','Unknown']
 
 import SmartBet from '../../build/contracts/SmartBet.json'
 
-export default function defineBetResult() {
+export default function DefineBetResult() {
   const [formInput, updateFormInput] = useState({betResult: 0})
   const router = useRouter()
   const { id } = router.query

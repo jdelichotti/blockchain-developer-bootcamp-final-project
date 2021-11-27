@@ -23,9 +23,9 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-require('dotenv').config();
+//require('dotenv').config();
 //const HDWalletProvider = require("truffle-hdwallet-provider");
-const HDWalletProvider = require("@truffle/hdwallet-provider");
+//const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 module.exports = {
   /**
@@ -52,7 +52,7 @@ module.exports = {
      },*/
 
     ropsten: {
-      provider: () => new HDWalletProvider(process.env.MNEMONIC,process.env.INFURA_API_URL),
+     // provider: () => new HDWalletProvider(process.env.MNEMONIC,process.env.INFURA_API_URL),
       network_id: 3,       // Ropsten's id
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
