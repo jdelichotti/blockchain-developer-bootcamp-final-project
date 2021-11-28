@@ -14,7 +14,6 @@ pragma solidity 0.8.4;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-//import "hardhat/console.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 contract SmartBet is Ownable,ReentrancyGuard{
@@ -289,7 +288,7 @@ contract SmartBet is Ownable,ReentrancyGuard{
         
 
         if (results == BetResults.LocalWin || results == BetResults.VistorWin ||results == BetResults.Drawn ){            
-            /// @dev This process calculates the winnings of each bettor based on the bet and outcome he/she has chosen.
+            /// @dev This process calculates the winnings of each bettor based on the bet outcome he/she has chosen.
             for (uint i=0;i < betGamblers[_betIndex].length; i++ ){
                 Gambler storage _gambler = betGamblers[_betIndex][i];                
                 
