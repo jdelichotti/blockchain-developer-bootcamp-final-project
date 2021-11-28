@@ -10,6 +10,11 @@ function Betplace({ Component, pageProps }) {
         <div className="flex mt-4">
           <Link href="/">
             <a className="mr-4 text-blue-500">
+              home
+            </a>
+          </Link>  
+          <Link href="/">
+            <a className="mr-4 text-blue-500">
               Bets
             </a>
           </Link>      
