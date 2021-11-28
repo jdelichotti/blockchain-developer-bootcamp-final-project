@@ -400,8 +400,7 @@ contract SmartBet is Ownable,ReentrancyGuard{
     /** @author J.Gabriel Delichotti*/
     /// @notice This function is used for Testing purposes
     function getGambler(uint _betIndex,uint _gamblerId) public view 
-        returns (address gamblerAccount, BetOptions betOption,uint betAmount,uint betRewardPayment) {
-        
+        returns (address gamblerAccount, BetOptions betOption,uint betAmount,uint betRewardPayment) {        
         Gambler memory gambleSummary = betGamblers[_betIndex][_gamblerId];
         return (
             gambleSummary.gamblerAccount,

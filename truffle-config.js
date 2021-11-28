@@ -18,12 +18,12 @@
  *
  */
 
- //const HDWalletProvider = require('@truffle/hdwallet-provider');
+ const HDWalletProvider = require('@truffle/hdwallet-provider');
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-//require('dotenv').config();
+require('dotenv').config();
 //const HDWalletProvider = require("truffle-hdwallet-provider");
 //const HDWalletProvider = require("@truffle/hdwallet-provider");
 
@@ -52,7 +52,7 @@ module.exports = {
      },*/
 
     ropsten: {
-     // provider: () => new HDWalletProvider(process.env.MNEMONIC,process.env.INFURA_API_URL),
+      provider: () => new HDWalletProvider(process.env.MNEMONIC,process.env.INFURA_API_URL),
       network_id: 3,       // Ropsten's id
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
@@ -63,7 +63,13 @@ module.exports = {
 
 
 
-     development: {
+     ganache: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+     },
+
+    develop: {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
