@@ -27,7 +27,7 @@
 
 ## Screencast link
 
-**************COMPLETAR******************
+https://loom.com/share/37254a33142a4b25af5aca3cc97d066a
 
 ## Public Ethereum wallet for certification:
 
