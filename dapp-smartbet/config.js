@@ -1,3 +1,6 @@
-export const smartbetaddress = "0xc99ACCb9869102bE605aC6abB3e43d167bC609C1"
+export const smartbetaddress = "0xE51201BB033FAE6e95e52753A91BebCF52250bAB"
 
+
+
+// Ropsten 0xc99ACCb9869102bE605aC6abB3e43d167bC609C1
 //0xc99ACCb9869102bE605aC6abB3e43d167bC609C1

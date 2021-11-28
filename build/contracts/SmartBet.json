@@ -350,7 +350,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -389,7 +390,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -428,7 +430,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -441,7 +444,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -465,7 +469,8 @@
     },
     {
       "stateMutability": "payable",
-      "type": "receive"
+      "type": "receive",
+      "payable": true
     },
     {
       "inputs": [
@@ -502,7 +507,8 @@
       "name": "addBetSponsor",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -520,7 +526,8 @@
       "name": "addGamblerBet",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -652,7 +659,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -693,7 +701,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -734,7 +743,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -803,7 +813,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -827,7 +838,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -866,7 +878,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"gambler\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"AddBetGambler\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sponsor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"AddBetSponsor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betIndex\",\"type\":\"uint256\"}],\"name\":\"CloseBet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betIndex\",\"type\":\"uint256\"}],\"name\":\"CountingVotesBet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"LocalTeam\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"VisitorTeam\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"CreateBet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betIndex\",\"type\":\"uint256\"}],\"name\":\"FinishedBet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"gamblerAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"GamblerPayment\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betIndex\",\"type\":\"uint256\"}],\"name\":\"OpenBet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betIndex\",\"type\":\"uint256\"}],\"name\":\"ReadyForPaymentBet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"betIndex\",\"type\":\"uint256\"}],\"name\":\"ResultsReadyBet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sponsorAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"SponsorPayment\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"}],\"name\":\"addBetSponsor\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"},{\"internalType\":\"enum SmartBet.BetOptions\",\"name\":\"_gamblerBetoption\",\"type\":\"uint8\"}],\"name\":\"addGamblerBet\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"betBook\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"betId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"localTeam\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"visitorTeam\",\"type\":\"string\"},{\"internalType\":\"enum SmartBet.BetStates\",\"name\":\"state\",\"type\":\"uint8\"},{\"internalType\":\"enum SmartBet.BetResults\",\"name\":\"results\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"sponsorsCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"gamblersCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"winnersCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"localWiningAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"visitorWiningAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"drawnAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"betGamblers\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"gamblerAccount\",\"type\":\"address\"},{\"internalType\":\"enum SmartBet.BetOptions\",\"name\":\"betOption\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"betAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"betRewardPayment\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"betSponsors\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"sponsorAccount\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"sponsorAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"sponsorFeeAmount\",\"type\":\"uint256\"},{\"internalType\":\"enum SmartBet.BetResults\",\"name\":\"result\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"}],\"name\":\"calcPayments\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"}],\"name\":\"closeBet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_localTeam\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_visitorTeam\",\"type\":\"string\"}],\"name\":\"createBet\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"betId\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"},{\"internalType\":\"enum SmartBet.BetResults\",\"name\":\"resultado\",\"type\":\"uint8\"}],\"name\":\"defineResult\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAvailableBets\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"betId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"localTeam\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"visitorTeam\",\"type\":\"string\"},{\"internalType\":\"enum SmartBet.BetStates\",\"name\":\"state\",\"type\":\"uint8\"},{\"internalType\":\"enum SmartBet.BetResults\",\"name\":\"results\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"sponsorsCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"gamblersCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"winnersCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"localWiningAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"visitorWiningAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"drawnAmount\",\"type\":\"uint256\"}],\"internalType\":\"struct SmartBet.BetDefinition[]\",\"name\":\"availableBets\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"betIndex\",\"type\":\"uint256\"}],\"name\":\"getBetSummary\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"local\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"visitor\",\"type\":\"string\"},{\"internalType\":\"enum SmartBet.BetStates\",\"name\":\"state\",\"type\":\"uint8\"},{\"internalType\":\"enum SmartBet.BetResults\",\"name\":\"results\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"sponsorsCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"gamblersCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"winnersCount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"localWiningAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"visitorWiningAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"drawnAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_gamblerId\",\"type\":\"uint256\"}],\"name\":\"getGambler\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"gamblerAccount\",\"type\":\"address\"},{\"internalType\":\"enum SmartBet.BetOptions\",\"name\":\"betOption\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"betAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"betRewardPayment\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"}],\"name\":\"getGamblers\",\"outputs\":[{\"components\":[{\"internalType\":\"address payable\",\"name\":\"gamblerAccount\",\"type\":\"address\"},{\"internalType\":\"enum SmartBet.BetOptions\",\"name\":\"betOption\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"betAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"betRewardPayment\",\"type\":\"uint256\"}],\"internalType\":\"struct SmartBet.Gambler[]\",\"name\":\"gamblers\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_sponsorId\",\"type\":\"uint256\"}],\"name\":\"getSponsor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"sponsorAccount\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"}],\"name\":\"getSponsors\",\"outputs\":[{\"components\":[{\"internalType\":\"address payable\",\"name\":\"sponsorAccount\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"sponsorAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"sponsorFeeAmount\",\"type\":\"uint256\"},{\"internalType\":\"enum SmartBet.BetResults\",\"name\":\"result\",\"type\":\"uint8\"}],\"internalType\":\"struct SmartBet.Sponsor[]\",\"name\":\"sponsor\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_betIndex\",\"type\":\"uint256\"}],\"name\":\"releasePayments\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addBetSponsor(uint256)\":{\"params\":{\"_betIndex\":\"is the Bet Identificator (ID)\"}},\"addGamblerBet(uint256,uint8)\":{\"params\":{\"_betIndex\":\"is the Bet Identificator (ID)\",\"_gamblerBetoption\":\"is the result expected by the Gambler    \"}},\"calcPayments(uint256)\":{\"params\":{\"_betIndex\":\"is the Bet Identificator (ID)\"}},\"closeBet(uint256)\":{\"details\":\"This event, on this version, is triggered by the contract's owner. It validates that the Bet is in the \\\"Open\\\" state before closing.\",\"params\":{\"_betIndex\":\"is the Bet Identificator (ID)\"}},\"createBet(string,string)\":{\"params\":{\"_localTeam\":\"Defines home team\",\"_visitorTeam\":\"Defines the visiting team    \"},\"returns\":{\"betId\":\"is the ID created for the new bet\"}},\"defineResult(uint256,uint8)\":{\"params\":{\"_betIndex\":\"is the Bet Identificator (ID)\",\"resultado\":\"is the result defined by the owner.\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"releasePayments(uint256)\":{\"params\":{\"_betIndex\":\"is the Bet Identificator (ID)\"}},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"NUM_SPONSOR_REQUIRED\":{\"details\":\"These data is fixex in the contract. \"},\"SponsorFee\":{\"details\":\"These values represent the fees that the Sponsors and the owner of the app will charge for each bet they place.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getAvailableBets()\":{\"notice\":\"This function is used in the Dapp to retrieve all the bets uploaded in the system\"},\"getBetSummary(uint256)\":{\"notice\":\"This function is used for Testing purposes\"},\"getGambler(uint256,uint256)\":{\"notice\":\"This function is used for Testing purposes\"},\"getGamblers(uint256)\":{\"notice\":\"This function is used in the Dapp to list the gambler of an specific bet\"},\"getSponsor(uint256,uint256)\":{\"notice\":\"This function is used for Testing purposes\"},\"getSponsors(uint256)\":{\"notice\":\"This function is used in the Dapp to list the Sponsors of an specific bet\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SmartBet.sol\":\"SmartBet\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa1b27b3f44ff825974e5268e8f63ad3b03add5b464880d860fbb8cae043e17f7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ad0fb4425453220f15bdb8c4e009052839804bb725797b6d8c02ee2271bc3c23\",\"dweb:/ipfs/QmPtjdMxzEifPUEUa6cKX1yfTWjaZV6QtdwMdN6bEL9FBM\"]},\"@openzeppelin/contracts/security/ReentrancyGuard.sol\":{\"keccak256\":\"0x86ebc6cea2b539c2d4a79a4754f7c90c43c45c9aaf0aab32ecffb1565afc5e0b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1d8016f7e49bd65a14769d2c846a7e589603e51c4bf82da94315cc59f54fe2e4\",\"dweb:/ipfs/Qmd92BAbMLEbYYfRWwN1yqDTxEuguenmQ35YFbPh3KEFuP\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x7736c187e6f1358c1ea9350a2a21aa8528dec1c2f43b374a9067465a3a51f5d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4fd625dca17657403af518cc6c8ab5c54c58898cf6e912ca2e1b0f3194ad0405\",\"dweb:/ipfs/QmQVv7YeeKmaS11bg7YDTeeGDk6i7sV8LMMfohaLM4SiRu\"]},\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x29c462775f5b4c76dce400f120f3530aa3f81da42c839f975dc2b64784d22434\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://063db5d664d3d5bae10d0056c9d00339265229532d06b53d5f2e91778b2e428d\",\"dweb:/ipfs/QmWM92rU59t6BcZSj4w6ikoPL32R9hyTMb9Msg5X8vvu1s\"]},\"project:/contracts/SmartBet.sol\":{\"keccak256\":\"0x7e064138a2690ee6ed7a9d04f7c6f989cc21f5effd4576380f9fe12443b8d8cb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e3ab504bb45d402c20d47bf2a10b69d3346fab689c394d7c5e5f35cfa6a0b4d1\",\"dweb:/ipfs/QmRDLYJ5Lhta5p8i17XAT8zrXUHrepp2yfpPgMKwjBQCiF\"]}},\"version\":1}",
@@ -48622,7 +48635,7 @@
       },
       "links": {},
       "address": "0xE51201BB033FAE6e95e52753A91BebCF52250bAB",
-      "transactionHash": "0x7a39e923ab6ee2f02fe30fc03bfd7aab7a8960686f7c4996b312d3b4202afae0"
+      "transactionHash": "0xf9c027d1c3668402f9556c6fd1cb405a38c4568a19ac693b0350b56fe1faf693"
     },
     "1638032641351": {
       "events": {},
@@ -48650,7 +48663,8 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-28T18:13:21.843Z",
+  "updatedAt": "2021-11-28T19:41:40.192Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
