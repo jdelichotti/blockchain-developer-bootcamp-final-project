@@ -7,12 +7,7 @@ function Betplace({ Component, pageProps }) {
     <div>
       <nav className="border-b p-6">
         <p className="text-4xl text-green-700 font-bold">SmartBet</p>
-        <div className="flex mt-4">
-          <Link href="/">
-            <a className="mr-4 text-blue-500">
-              home
-            </a>
-          </Link>  
+        <div className="flex mt-4"> 
           <Link href="/">
             <a className="mr-4 text-blue-500">
               Bets
