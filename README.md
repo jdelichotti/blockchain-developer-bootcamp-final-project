@@ -50,7 +50,8 @@ There are 7 TCs written in javascript. To execute them you must run the followin
    `cd dapp-smartnet`
 6. Execute the following commands:
    
-   `npm run dev`
+  `npm install`
+  `npm run dev`
 7. Go to http://localhost:3000
 
    ![image](https://user-images.githubusercontent.com/32246675/143801327-383a94da-8596-464e-8554-20516b5fd553.png)
