@@ -18,7 +18,9 @@ https://ecstatic-jennings-d355b5.netlify.app/
   1. `git clone https://github.com/jdelichotti/blockchain-developer-bootcamp-final-project.git`
   2. `cd blockchain-developer-bootcamp-final-project/`
   3. `npm install`
-      This command will install the following dependencies:
+     
+    This command will install the following dependencies:
+    
       - @openzeppelin/contracts    --> Used to inherit contracts
       - @truffle/hdwallet-provider --> To deploy de smart contract to INFURA
       - chai-truffle               --> For testing purposes
@@ -26,6 +28,7 @@ https://ecstatic-jennings-d355b5.netlify.app/
       - ethers                     --> Interact with the smart contract
       - ganache-cli                --> Used for development & testing purposes
       - web3modal                  --> Used to connect to Metamask wallet
+    
   4. `code . `-> Open VCode!
  
 ### Running the Test Cases
@@ -66,6 +69,15 @@ There are 7 TCs written in javascript. To execute them you must run the followin
     
    Dapp Up & Running
 
+The truffe config file is set with this parameters for the development environment:
+
+```
+  develop: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+     network_id: "1337",       // Any network (default: none)
+     }
+```
 
 ## Screencast link
 
