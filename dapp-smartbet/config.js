@@ -1,4 +1,4 @@
-export const smartbetaddress = "0xFb1f24cE24a4d5073401644C42c99B165678875c"
+export const smartbetaddress = "0xE51201BB033FAE6e95e52753A91BebCF52250bAB"
 
 
 // Ropsten 0xFb1f24cE24a4d5073401644C42c99B165678875c --28-Nov-2021 9:39
