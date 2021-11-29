@@ -10,20 +10,20 @@ https://ecstatic-jennings-d355b5.netlify.app/
 
 - Node.js >= v14
 - Truffle and Ganache
-- `git checkout master`
+
 
 ### Setup
 - Clone the repository in your local machine and install the dependencies
   
-  1. git clone https://github.com/jdelichotti/blockchain-developer-bootcamp-final-project.git
-  2. cd blockchain-developer-bootcamp-final-project/
-  3. npm install
-  4. code . -> Open VCode!
+  1. `git clone https://github.com/jdelichotti/blockchain-developer-bootcamp-final-project.git`
+  2. `cd blockchain-developer-bootcamp-final-project/`
+  3. `npm install`
+  4. `code . `-> Open VCode!
  
 ### Running the Test Cases
 There are 7 TCs written in javascript. To execute them you must run the following commands:
-1. truffle develop -> It creates the internal blockchain network to perform the testing
-2. test --> It will compile the contracts and execute the Test Cases.
+1. `truffle develop` -> It creates the internal blockchain network to perform the testing
+2. `test` --> It will compile the contracts and execute the Test Cases.
 
 ![image](https://user-images.githubusercontent.com/32246675/143797692-7ea03f25-8e2f-42fa-92d8-43666707c032.png)
 
@@ -31,21 +31,24 @@ There are 7 TCs written in javascript. To execute them you must run the followin
 ### Deploy Frontend in the local environment
 
 1. First of all we have to setup the blockhain network using ganache-cli
-   truffle develop -> It creates the internal blockchain network to perform the testing
+   
+   `truffle develop` -> It creates the internal blockchain network to perform the testing
    
   ![image](https://user-images.githubusercontent.com/32246675/143800291-8225616d-b9f1-48ce-bcce-7b8bcbdb7b21.png)
 
 2. Migrate the contract to the network
-   **migrate**
+   `migrate`
 
 3. Copy the smart contract address generated after execute migrate
    ![image](https://user-images.githubusercontent.com/32246675/143800636-dc0ec4f1-297f-4c28-907f-1e760c45c4ee.png)
 
 4. Paste the address in the config.js file (/dapp-smartbet/config.js
 5. Open a new console and navigate to dapp-smartbet folder
-   cd dapp-smartnet
+   
+   `cd dapp-smartnet`
 6. Execute the following commands:
-   npm run dev
+   
+   `npm run dev`
 7. Go to http://localhost:3000
 
    ![image](https://user-images.githubusercontent.com/32246675/143801327-383a94da-8596-464e-8554-20516b5fd553.png)
