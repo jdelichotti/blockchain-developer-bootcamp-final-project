@@ -18,6 +18,14 @@ https://ecstatic-jennings-d355b5.netlify.app/
   1. `git clone https://github.com/jdelichotti/blockchain-developer-bootcamp-final-project.git`
   2. `cd blockchain-developer-bootcamp-final-project/`
   3. `npm install`
+      This command will install the following dependencies:
+      - @openzeppelin/contracts    --> Used to inherit contracts
+      - @truffle/hdwallet-provider --> To deploy de smart contract to INFURA
+      - chai-truffle               --> For testing purposes
+      - dotenv                     --> To handle .env files
+      - ethers                     --> Interact with the smart contract
+      - ganache-cli                --> Used for development & testing purposes
+      - web3modal                  --> Used to connect to Metamask wallet
   4. `code . `-> Open VCode!
  
 ### Running the Test Cases
