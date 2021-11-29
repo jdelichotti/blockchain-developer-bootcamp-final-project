@@ -241,7 +241,7 @@ contract("SmartBet", (accounts) => {
       }  
     })
 
-    it("Only the Contract's Owner cannot close Bet which does not exists", async () =>{
+    it("The Contract's Owner cannot close Bet which does not exists", async () =>{
         const res = await bet.createBet(local,visitor,{from:contractOwner})
         let betId=0
     /// Sponsors

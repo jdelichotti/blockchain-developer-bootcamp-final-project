@@ -157,8 +157,8 @@ contract SmartBet is Ownable,ReentrancyGuard{
         In addition, the validation to avoid the Reentry Attack is added.*/
     /// @param _betIndex is the Bet Identificator (ID)
     function addBetSponsor(uint _betIndex) public payable betExists(_betIndex) nonReentrant{        
-        require(betBook[_betIndex].state == BetStates.BetFunding,"tema 1");
-        require(msg.value > MIN_SPONSOR_AMOUNT, "tema 2");
+        require(betBook[_betIndex].state == BetStates.BetFunding,"Bet is not on Bet Funding Status");
+        require(msg.value > MIN_SPONSOR_AMOUNT, "The liqudity added is not enought to be a Sponsor");
 
         uint _currentSponsors = betBook[_betIndex].sponsorsCount;        
 
@@ -201,7 +201,7 @@ contract SmartBet is Ownable,ReentrancyGuard{
     /// @param _gamblerBetoption is the result expected by the Gambler    
     function addGamblerBet(uint _betIndex, BetOptions _gamblerBetoption) public payable betExists(_betIndex) nonReentrant {
         require(betBook[_betIndex].state == BetStates.Open);
-        require(msg.value > MIN_BET_AMOUNT);
+        require(msg.value > MIN_BET_AMOUNT,"The bet amount is to small");
         require(  _gamblerBetoption == BetOptions.LocalWin 
                 ||_gamblerBetoption == BetOptions.VistorWin 
                 ||_gamblerBetoption == BetOptions.Drawn);
@@ -330,15 +330,17 @@ contract SmartBet is Ownable,ReentrancyGuard{
      
         for (uint i=0 ; i < betGamblers[_betIndex].length ; i++){
             Gambler storage _gambler = betGamblers[_betIndex][i];
-             (bool sent, ) = _gambler.gamblerAccount.call{value: _gambler.betRewardPayment}("");            
-            require(sent, "Failed to send Ether 1 ");            
-            emit GamblerPayment(_gambler.gamblerAccount,_gambler.betRewardPayment);
+            if (_gambler.betRewardPayment > 0){
+                (bool sent, ) = _gambler.gamblerAccount.call{value: _gambler.betRewardPayment}("");            
+                require(sent, "Failed to send Ether to Gamblers");            
+                emit GamblerPayment(_gambler.gamblerAccount,_gambler.betRewardPayment);
+            }
         }
 
         for (uint i=0 ; i < betSponsors[_betIndex].length ; i++){
             Sponsor storage _sponsor = betSponsors[_betIndex][i];
              (bool sent, ) = _sponsor.sponsorAccount.call{value: _sponsor.sponsorFeeAmount}("");            
-            require(sent, "Failed to send Ether 2 ");            
+            require(sent, "Failed to send Ether to Sponsors ");            
             emit SponsorPayment(_sponsor.sponsorAccount,_sponsor.sponsorFeeAmount);
         }        
         betBook[_betIndex].state = BetStates.Finished;
@@ -388,21 +390,6 @@ contract SmartBet is Ownable,ReentrancyGuard{
             betSummary.visitorWiningAmount,
             betSummary.drawnAmount
             
-        );
-    }
-
-
-    /** @author J.Gabriel Delichotti*/
-    /// @notice This function is used for Testing purposes
-    
-    function getGambler(uint _betIndex,uint _gamblerId) public view 
-        returns (address gamblerAccount, BetOptions betOption,uint betAmount,uint betRewardPayment) {        
-        Gambler memory gambleSummary = betGamblers[_betIndex][_gamblerId];
-        return (
-            gambleSummary.gamblerAccount,
-            gambleSummary.betOption,
-            gambleSummary.betAmount,
-            gambleSummary.betRewardPayment
         );
     }
 
