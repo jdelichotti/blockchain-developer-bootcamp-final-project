@@ -43,6 +43,8 @@ There are 7 TCs written in javascript. To execute them you must run the followin
    ![image](https://user-images.githubusercontent.com/32246675/143800636-dc0ec4f1-297f-4c28-907f-1e760c45c4ee.png)
 
 4. Paste the address in the config.js file (/dapp-smartbet/config.js
+  ![image](https://user-images.githubusercontent.com/32246675/143817198-1b52f858-bf1f-4848-840c-11b9af9fe425.png)
+
 5. Open a new console and navigate to dapp-smartbet folder
    
    `cd dapp-smartnet`
