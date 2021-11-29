@@ -2,7 +2,7 @@
 
 ## Deployed version url:
 
-**************COMPLETAR******************
+https://ecstatic-jennings-d355b5.netlify.app/
 
 ## How to run this project locally:
 
