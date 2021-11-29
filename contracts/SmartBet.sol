@@ -390,15 +390,11 @@ contract SmartBet is Ownable,ReentrancyGuard{
             
         );
     }
-    /** @author J.Gabriel Delichotti*/
-    /// @notice This function is used for Testing purposes
-    function getSponsor(uint _betIndex,uint _sponsorId) public view 
-        returns ( address sponsorAccount){
-        return betSponsors[_betIndex][_sponsorId].sponsorAccount;    
-    }
+
 
     /** @author J.Gabriel Delichotti*/
     /// @notice This function is used for Testing purposes
+    
     function getGambler(uint _betIndex,uint _gamblerId) public view 
         returns (address gamblerAccount, BetOptions betOption,uint betAmount,uint betRewardPayment) {        
         Gambler memory gambleSummary = betGamblers[_betIndex][_gamblerId];
